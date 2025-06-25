@@ -42,10 +42,14 @@ body {
   font-size: 30px;
 }
 
-img {
-  max-height: 200px;
+.paper img {
+  display: block;
   width: 100%;
-  user-select: none;
+  height: auto;
+  max-width: 100%;
+  max-height: 40vw;    /* Biar tinggi gambar tidak melebihi tinggi layar di HP */
+  object-fit: contain; /* Jaga proporsi gambar */
+  margin: 0 auto;
 }
 
 .paper.heart::after {
