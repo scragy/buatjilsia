@@ -42,14 +42,17 @@ body {
   font-size: 30px;
 }
 
-.paper img {
+.paper.image img {
   display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 40vw;    /* Biar tinggi gambar tidak melebihi tinggi layar di HP */
-  object-fit: contain; /* Jaga proporsi gambar */
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* atau lebih singkat: margin: 0 auto; */
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  user-select: none;
 }
 
 .paper.heart::after {
@@ -75,4 +78,3 @@ p {
   
   filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
 }
-
