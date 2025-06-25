@@ -87,3 +87,14 @@ papers.forEach(paper => {
   const p = new Paper();
   p.init(paper);
 });
+document.addEventListener('DOMContentLoaded', function() {
+    var music = document.getElementById('bg-music');
+    // Untuk beberapa browser, autoplay butuh trigger user
+    function startMusic() {
+      music.play();
+      document.removeEventListener('touchstart', startMusic);
+      document.removeEventListener('click', startMusic);
+    }
+    document.addEventListener('touchstart', startMusic);
+    document.addEventListener('click', startMusic);
+  });
